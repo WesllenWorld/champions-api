@@ -1,12 +1,11 @@
 import { Router } from 'express'
-import { getPlayer } from '../controllers/players-controller'
+import * as playerController from '../controllers/players-controller'
 
 const router = Router()
 
-router.get('/players', getPlayer)
-
-
-
+router.get('/players', playerController.getPlayers)
+router.get('/players/:id', playerController.getPlayerById)
+router.post('/players', playerController.postPlayer)
 
 
 
