@@ -14,6 +14,7 @@ function createApp() {
         origin: ['http://sitedaora.com', 'http://pongkrell.com'],
         methods: ['GET', 'POST'],
     }
+    app.use(cors(/*corsOptions*/))
 
     return app
 }
